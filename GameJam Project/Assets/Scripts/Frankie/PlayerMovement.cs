@@ -91,8 +91,8 @@ public class PlayerMovement : MonoBehaviour
         {
             body.AddForce(-transform.up * gravity);
         }
+       
 
-        
     }
     private void GroundCheckZero()
     {
@@ -117,21 +117,23 @@ public class PlayerMovement : MonoBehaviour
 
     protected bool RaycastFromGroundCheck(Vector2 direction, float distance, out RaycastHit2D hitInfo)
     {
-        // Perform the 2D raycast
+       
         hitInfo = Physics2D.Raycast((Vector2)transform.position + Vector2.up * groundCheckOffset, direction, distance, groundLayer);
 
         bool hit = hitInfo.collider != null;
 
-        // Calculate the slope angle based on the hit normal
+       
         if (hit)
         {
             slopeAngle = Vector2.Angle(hitInfo.normal, Vector2.up);
         }
 
-        // Debug draw the ray
-        Color rayColor = hit ? Color.green : Color.red; // Green if hit, red if no hit
+     
+        Color rayColor = hit ? Color.green : Color.red; 
         Debug.DrawRay((Vector2)transform.position + Vector2.up * groundCheckOffset, direction * distance, rayColor);
 
         return hit;
     }
+
+
 }
