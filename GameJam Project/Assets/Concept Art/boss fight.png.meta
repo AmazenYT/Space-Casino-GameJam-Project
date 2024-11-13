@@ -176,7 +176,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      boss fight_0: 3796906655891396684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
