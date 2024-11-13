@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 994c144fed27db14d94187183847f8fd
+guid: b553d4c179a5fa44c994793b93e8d2e9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4636069689738459504
-    second: dd91nm8-9981dfbe-eab4-4295-b5ce-70444d5d8239_0
+      213: -2928220184619840807
+    second: space game assets_0
+  - first:
+      213: -1973701603145226078
+    second: space game assets_1
+  - first:
+      213: 7187542304763041561
+    second: space game assets_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dd91nm8-9981dfbe-eab4-4295-b5ce-70444d5d8239_0
+      name: space game assets_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 4
-        width: 228
-        height: 661
+        x: 3
+        y: 112
+        width: 66
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +118,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0960f2d1e2f59afb0800000000000000
-      internalID: -4636069689738459504
+      spriteID: 9da0b97a14fdc57d0800000000000000
+      internalID: -2928220184619840807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space game assets_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 133
+        width: 55
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8e8eb59d00c94e0800000000000000
+      internalID: -1973701603145226078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space game assets_2
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 127
+        width: 48
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9175e7b15a74fb360800000000000000
+      internalID: 7187542304763041561
       vertices: []
       indices: 
       edges: []
@@ -128,8 +176,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      dd91nm8-9981dfbe-eab4-4295-b5ce-70444d5d8239_0: -4636069689738459504
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
