@@ -864,7 +864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 340587412}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 199.31001, y: 6.2545366, z: 0.044744346}
+  m_LocalPosition: {x: 208, y: -9.6, z: 0.044744346}
   m_LocalScale: {x: 13.895, y: 13.895, z: 13.895}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2158,7 +2158,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 964796732}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 294.71, y: 16.354538, z: 0.044744346}
+  m_LocalPosition: {x: 292, y: -2.2, z: 0.044744346}
   m_LocalScale: {x: 13.895, y: 13.895, z: 13.895}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2480,9 +2480,9 @@ GameObject:
   - component: {fileID: 1156822991}
   - component: {fileID: 1156822992}
   - component: {fileID: 1156822993}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2805,7 +2805,7 @@ MonoBehaviour:
   playerRotationSpeed: 6
   jumpHeight: 10
   gravity: -1
-  moonGravity: 0
+  moonGravity: 1
   downwardForce: 25
   moonDownwardForce: 12.5
   groundCheckDistance: 1.25
