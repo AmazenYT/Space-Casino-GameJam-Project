@@ -176,7 +176,10 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      space game assets_0: -2928220184619840807
+      space game assets_1: -1973701603145226078
+      space game assets_2: 7187542304763041561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
