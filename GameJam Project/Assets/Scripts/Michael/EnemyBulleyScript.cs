@@ -29,9 +29,9 @@ public class EnemyBulleyScript : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer > 10)
+        //if (timer > 10)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
 
 
@@ -39,9 +39,9 @@ public class EnemyBulleyScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        //if(other.gameObject.CompareTag("Player"))
         {
-            Destroy(gameObject);
+           // Destroy(gameObject);
         }
     }
 }
