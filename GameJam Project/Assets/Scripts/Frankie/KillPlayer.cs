@@ -5,11 +5,11 @@ public class KillPlayer : MonoBehaviour
     Vector2 checkpointPos;
     SpriteRenderer spriteRenderer;
     PlayerMovement playerMovement;
-    Rigidbody2D playerbody;  
+    Rigidbody2D playerbody;
 
     private void Awake()
     {
-        playerbody = GetComponent<Rigidbody2D>(); 
+        playerbody = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         playerMovement = GetComponent<PlayerMovement>();
     }
@@ -21,6 +21,7 @@ public class KillPlayer : MonoBehaviour
 
     void OnCollisionEnter(Collision collisionInfo)
     {
+       
         if (collisionInfo.collider.CompareTag("Obstacle"))
         {
             Die();
@@ -33,6 +34,10 @@ public class KillPlayer : MonoBehaviour
         {
             Die();
         }
+        else if (collision.CompareTag("KillPlane"))
+        {
+            Die();
+        }
     }
 
     void Die()
@@ -42,7 +47,7 @@ public class KillPlayer : MonoBehaviour
             playerMovement.enabled = false;
         }
 
-        StartCoroutine(Respawn(0.5f));
+        StartCoroutine(Respawn(0.5f)); 
     }
 
     public void UpdateCheckpoint(Vector2 pos)
@@ -50,18 +55,17 @@ public class KillPlayer : MonoBehaviour
         checkpointPos = pos;
     }
 
- 
     System.Collections.IEnumerator Respawn(float duration)
     {
         spriteRenderer.enabled = false; 
-        playerbody.velocity = new Vector2(0, 0);  
-        yield return new WaitForSeconds(duration); 
+        playerbody.velocity = Vector2.zero;  
+        yield return new WaitForSeconds(duration);  
         transform.position = checkpointPos;  
         spriteRenderer.enabled = true;  
 
         if (playerMovement != null)
         {
-            playerMovement.enabled = true;  
+            playerMovement.enabled = true; 
         }
     }
 }
