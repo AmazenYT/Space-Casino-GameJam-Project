@@ -35,13 +35,25 @@ public class EnemyPotrol : MonoBehaviour
 
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == PointB.transform)
         {
+            flip();
             currentPoint = PointA.transform;
         }
         if (Vector2.Distance(transform.position, currentPoint.position) < 0.5f && currentPoint == PointA.transform)
         {
+            flip();
             currentPoint = PointB.transform;
         }
     }
+
+    private void flip()
+    {
+        Vector3 localscale = transform.localScale;
+        localscale.x *= -1;
+        transform.localScale = localscale;
+
+    }
+
+
 
     private void OnDrawGizmos()
     {
