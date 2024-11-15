@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3030871178536310345}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -29.83, y: -1.13, z: 0}
+  m_LocalPosition: {x: -10.5, y: 2, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51,7 +51,7 @@ MonoBehaviour:
   speed: 20
   maxSpeed: 20
   playerRotationSpeed: 6
-  jumpHeight: 10
+  jumpHeight: 12.5
   gravity: -1
   moonGravity: 1
   downwardForce: 25
