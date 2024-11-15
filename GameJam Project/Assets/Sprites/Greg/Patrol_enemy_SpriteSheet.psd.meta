@@ -107,34 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Patrol_enemy_SpriteSheet
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 399
-        height: 406
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7bc66d3abe595a4c0800000000000000
-      internalID: -4276847431819825993
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Patrol_enemy_SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 399
-        y: 0
-        width: 399
-        height: 406
+        x: 483
+        y: 35
+        width: 154
+        height: 273
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +131,10 @@ TextureImporter:
       name: Patrol_enemy_SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 798
-        y: 0
-        width: 399
-        height: 406
+        x: 903
+        y: 35
+        width: 154
+        height: 273
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +152,10 @@ TextureImporter:
       name: Patrol_enemy_SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 1197
-        y: 0
-        width: 399
-        height: 406
+        x: 1281
+        y: 35
+        width: 154
+        height: 273
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -186,6 +165,27 @@ TextureImporter:
       bones: []
       spriteID: 7df3e7c4f53166b43b5dcc4d295f1b91
       internalID: 1229584441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Patrol_enemy_SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 37
+        width: 154
+        height: 273
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20cfb69f26ea66449e7b731108a41d8
+      internalID: 1850202665
       vertices: []
       indices: 
       edges: []
@@ -201,7 +201,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Patrol_enemy_SpriteSheet: -4276847431819825993
+      Patrol_enemy_SpriteSheet_0: 1850202665
       Patrol_enemy_SpriteSheet_1: -8875364657688986794
       Patrol_enemy_SpriteSheet_2: 5189287008989640945
       Patrol_enemy_SpriteSheet_3: 1229584441
