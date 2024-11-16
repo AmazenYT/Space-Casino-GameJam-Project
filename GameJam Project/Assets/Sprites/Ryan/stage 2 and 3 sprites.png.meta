@@ -272,7 +272,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      stage 2 and 3 sprites_0: 1056754780830333859
+      stage 2 and 3 sprites_1: -4786586186322877024
+      stage 2 and 3 sprites_2: -6722515011390784771
+      stage 2 and 3 sprites_3: -8072464310458036676
+      stage 2 and 3 sprites_4: -3031389313070406629
+      stage 2 and 3 sprites_5: 2595630238947905196
+      stage 2 and 3 sprites_6: -1071389490922144644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

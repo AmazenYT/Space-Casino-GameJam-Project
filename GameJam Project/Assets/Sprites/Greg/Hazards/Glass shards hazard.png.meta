@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 580c1a3baae7d2f4aa1978cfd00dd2b1
+guid: 0c885c6dcfeb98e49b98e15ef08ccf27
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8873155289363939019
-    second: 640f88c0425535a614cc5cda76cd0141_0
+      213: 468014973392512728
+    second: Glass shards hazard_0
   - first:
-      213: -2383196290267841649
-    second: 640f88c0425535a614cc5cda76cd0141_1
+      213: -7760371702392317851
+    second: Glass shards hazard_1
   - first:
-      213: -6055028900071938959
-    second: 640f88c0425535a614cc5cda76cd0141_2
-  - first:
-      213: -4228919796526957742
-    second: 640f88c0425535a614cc5cda76cd0141_3
-  - first:
-      213: -63075977730681120
-    second: 640f88c0425535a614cc5cda76cd0141_4
-  - first:
-      213: -7318378609002217324
-    second: 640f88c0425535a614cc5cda76cd0141_5
+      213: 1544646060142179659
+    second: Glass shards hazard_2
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -52,7 +43,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -61,7 +52,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -113,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 640f88c0425535a614cc5cda76cd0141_0
+      name: Glass shards hazard_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 375
-        width: 216
-        height: 162
+        x: 14
+        y: 39
+        width: 24
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,61 +118,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bce7a6349b7c32b70800000000000000
-      internalID: 8873155289363939019
+      spriteID: 8d6ef9e7329be7600800000000000000
+      internalID: 468014973392512728
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 640f88c0425535a614cc5cda76cd0141_1
+      name: Glass shards hazard_1
       rect:
         serializedVersion: 2
-        x: 243
-        y: 445
-        width: 178
-        height: 102
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f8b7e88c99f2deed0800000000000000
-      internalID: -2383196290267841649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 640f88c0425535a614cc5cda76cd0141_2
-      rect:
-        serializedVersion: 2
-        x: 449
-        y: 425
-        width: 156
-        height: 156
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 174ec7adb4738fba0800000000000000
-      internalID: -6055028900071938959
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 640f88c0425535a614cc5cda76cd0141_3
-      rect:
-        serializedVersion: 2
-        x: 929
-        y: 353
-        width: 14
+        x: 41
+        y: 39
+        width: 22
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -190,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25bb460d9dbdf45c0800000000000000
-      internalID: -4228919796526957742
+      spriteID: 56899e98d0f9d4490800000000000000
+      internalID: -7760371702392317851
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 640f88c0425535a614cc5cda76cd0141_4
+      name: Glass shards hazard_2
       rect:
         serializedVersion: 2
-        x: 15
-        y: 133
-        width: 162
-        height: 64
+        x: 58
+        y: 39
+        width: 27
+        height: 21
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -211,29 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e690818bb8ef1ff0800000000000000
-      internalID: -63075977730681120
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 640f88c0425535a614cc5cda76cd0141_5
-      rect:
-        serializedVersion: 2
-        x: 195
-        y: 109
-        width: 210
-        height: 96
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4900b96fd65ef6a90800000000000000
-      internalID: -7318378609002217324
+      spriteID: b453b76686faf6510800000000000000
+      internalID: 1544646060142179659
       vertices: []
       indices: 
       edges: []
@@ -241,7 +169,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -249,12 +177,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      640f88c0425535a614cc5cda76cd0141_0: 8873155289363939019
-      640f88c0425535a614cc5cda76cd0141_1: -2383196290267841649
-      640f88c0425535a614cc5cda76cd0141_2: -6055028900071938959
-      640f88c0425535a614cc5cda76cd0141_3: -4228919796526957742
-      640f88c0425535a614cc5cda76cd0141_4: -63075977730681120
-      640f88c0425535a614cc5cda76cd0141_5: -7318378609002217324
+      Glass shards hazard_0: 468014973392512728
+      Glass shards hazard_1: -7760371702392317851
+      Glass shards hazard_2: 1544646060142179659
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
