@@ -14,8 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level02.unity
     guid: 300fee5c185a19c43b142d0d04328ebe
-  - enabled: 0
-    path: Assets/Scenes/Personal/Frankie.unity
-    guid: d48329459d75ea049bbafe982daf24fb
+  - enabled: 1
+    path: Assets/Scenes/CreditsScreen.unity
+    guid: 6939539d9578bdc4fb908890217eb1f2
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
