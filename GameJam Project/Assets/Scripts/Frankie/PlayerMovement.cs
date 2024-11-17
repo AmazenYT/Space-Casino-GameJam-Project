@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Animator anim;
-    
+    public Rigidbody2D rb;
+
     [Header("Player Settings")]
     public float speed;
     public float maxSpeed = 20f;
@@ -58,7 +59,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            Jump();
+            Jump();   
             GroundCheckZero();
             Invoke(nameof(GroundCheckDefault),0.5f);
 
@@ -84,34 +85,47 @@ public class PlayerMovement : MonoBehaviour
 
         /*if (!grounded)
         {
+            anim.SetBool("isJumping", true);
+        }
+        else
+        {
             anim.SetBool("isJumping", false);
         }
-        if (grounded)
-        {
-            anim.SetBool("isjumping", true);
-        } */
-
+        */
         if (Move > 0)
         {
-            gameObject.transform.localScale = new Vector3((float)0.5, (float)0.5, (float)0.5);
+            gameObject.transform.localScale = new Vector3((float)0.5, (float)0.5, (float)1);
         }
 
         if (Move < 0)
         {
-            gameObject.transform.localScale = new Vector3((float)-0.5, (float)0.5, (float)0.5);
+            gameObject.transform.localScale = new Vector3((float)-0.5, (float)0.5, (float)1);
         }
-
-
-
 
 
     }
 
+     private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            anim.SetBool("isJumping", false);
+        }
+    }
+
+    /*private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            anim.SetBool("isJumping", true);        
+        }
+    }
+    */
 
 
 
 
-        private void FixedUpdate()
+    private void FixedUpdate()
         {
         body.velocity = Vector3.ClampMagnitude(body.velocity, maxSpeed);
 
@@ -150,6 +164,26 @@ public class PlayerMovement : MonoBehaviour
     {
         body.AddForce(Vector2.up * jumpHeight, ForceMode2D.Impulse);
         grounded = false;
+
+        if (!grounded)
+        {
+            anim.SetBool("isJumping", true);
+        }
+        //If you switch true and false around the player will run and idle with animation. he can jump but has no animationSS
+        else
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        /*if (Input.GetButtonDown("Space"))
+        {
+            rb.AddForce(new Vector2(rb.velocity.x, jumpHeight));
+        }*/
+
+
+
+
+        // body.velocity = new Vector2(body.velocity.x, jumpHeight);
     }
 
     public bool IsGrounded()
