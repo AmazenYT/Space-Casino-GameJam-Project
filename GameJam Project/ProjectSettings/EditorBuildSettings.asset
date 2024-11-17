@@ -14,7 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level02.unity
     guid: 300fee5c185a19c43b142d0d04328ebe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Personal/Frankie.unity
     guid: d48329459d75ea049bbafe982daf24fb
   m_configObjects: {}
