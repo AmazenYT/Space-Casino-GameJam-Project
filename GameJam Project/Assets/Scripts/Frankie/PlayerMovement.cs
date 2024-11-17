@@ -1,7 +1,7 @@
-
 using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
+
 public class PlayerMovement : MonoBehaviour
 {
     public Animator anim;
@@ -12,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     public float maxSpeed = 20f;
     public float playerRotationSpeed = 2f;
     public float jumpHeight;
-    
 
     [Header("Gravity Settings")]
     public float gravity = -1f;
@@ -25,8 +24,10 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckOffset = 0.25f;
     public LayerMask groundLayer;
     public float slopeAngle;
-   
-    
+
+    [Header("Sound Settings")]
+    public AudioSource audioSource;        // The AudioSource component to play sounds
+    public AudioClip jumpSound;            // The sound effect for jumping
 
     // Private variables
     private Rigidbody2D body;
@@ -35,13 +36,14 @@ public class PlayerMovement : MonoBehaviour
     private float defaultGroundCheckDistance;
     private float Move;
 
-
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>(); // Ensure the player object has an AudioSource attached
         Application.targetFrameRate = 60;
         defaultGroundCheckDistance = groundCheckDistance;
     }
+
     private void HandlePlayerVelocity(bool right)
     {
         if (right)
@@ -53,17 +55,18 @@ public class PlayerMovement : MonoBehaviour
             body.AddForce(-transform.right * speed);
         }
     }
+
     private void Update()
     {
         Move = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
-            Jump();   
+            Jump();
             GroundCheckZero();
-            Invoke(nameof(GroundCheckDefault),0.5f);
-
+            Invoke(nameof(GroundCheckDefault), 0.5f);
         }
+
         if (Input.GetKey(KeyCode.D))
         {
             HandlePlayerVelocity(true);
@@ -74,7 +77,7 @@ public class PlayerMovement : MonoBehaviour
             HandlePlayerVelocity(false);
         }
 
-        if(Move >= 0.1f || Move <= -0.1f)
+        if (Move >= 0.1f || Move <= -0.1f)
         {
             anim.SetBool("isRunning", true);
         }
@@ -83,29 +86,18 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
 
-        /*if (!grounded)
-        {
-            anim.SetBool("isJumping", true);
-        }
-        else
-        {
-            anim.SetBool("isJumping", false);
-        }
-        */
         if (Move > 0)
         {
-            gameObject.transform.localScale = new Vector3((float)0.5, (float)0.5, (float)1);
+            gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 1);
         }
 
         if (Move < 0)
         {
-            gameObject.transform.localScale = new Vector3((float)-0.5, (float)0.5, (float)1);
+            gameObject.transform.localScale = new Vector3(-0.5f, 0.5f, 1);
         }
-
-
     }
 
-     private void OnCollisionEnter2D(Collision2D other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -113,20 +105,8 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionExit2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            anim.SetBool("isJumping", true);        
-        }
-    }
-    */
-
-
-
-
     private void FixedUpdate()
-        {
+    {
         body.velocity = Vector3.ClampMagnitude(body.velocity, maxSpeed);
 
         if (!moonGravity)
@@ -140,25 +120,23 @@ public class PlayerMovement : MonoBehaviour
             {
                 gravity = 5f;
                 transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0f, 0f, 0f), Time.fixedDeltaTime * playerRotationSpeed);
-
             }
         }
         if (!IsGrounded())
         {
             body.AddForce(-transform.up * gravity);
         }
-       
-
     }
+
     private void GroundCheckZero()
     {
         groundCheckDistance = 0f;
     }
+
     private void GroundCheckDefault()
     {
         groundCheckDistance = defaultGroundCheckDistance;
     }
-
 
     private void Jump()
     {
@@ -169,21 +147,16 @@ public class PlayerMovement : MonoBehaviour
         {
             anim.SetBool("isJumping", true);
         }
-        //If you switch true and false around the player will run and idle with animation. he can jump but has no animationSS
         else
         {
             anim.SetBool("isJumping", false);
         }
 
-        /*if (Input.GetButtonDown("Space"))
+        // Play the jump sound
+        if (audioSource != null && jumpSound != null)
         {
-            rb.AddForce(new Vector2(rb.velocity.x, jumpHeight));
-        }*/
-
-
-
-
-        // body.velocity = new Vector2(body.velocity.x, jumpHeight);
+            audioSource.PlayOneShot(jumpSound);
+        }
     }
 
     public bool IsGrounded()
@@ -193,23 +166,17 @@ public class PlayerMovement : MonoBehaviour
 
     protected bool RaycastFromGroundCheck(Vector2 direction, float distance, out RaycastHit2D hitInfo)
     {
-       
         hitInfo = Physics2D.Raycast((Vector2)transform.position + Vector2.up * groundCheckOffset, direction, distance, groundLayer);
-
         bool hit = hitInfo.collider != null;
 
-       
         if (hit)
         {
             slopeAngle = Vector2.Angle(hitInfo.normal, Vector2.up);
         }
 
-     
-        Color rayColor = hit ? Color.green : Color.red; 
+        Color rayColor = hit ? Color.green : Color.red;
         Debug.DrawRay((Vector2)transform.position + Vector2.up * groundCheckOffset, direction * distance, rayColor);
 
         return hit;
     }
-
-
 }
