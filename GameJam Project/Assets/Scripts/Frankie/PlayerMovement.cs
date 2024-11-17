@@ -1,8 +1,11 @@
 
 using Unity.Burst.CompilerServices;
+using Unity.VisualScripting;
 using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
+    public Animator anim;
+    
     [Header("Player Settings")]
     public float speed;
     public float maxSpeed = 20f;
@@ -29,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private bool grounded;
     private RaycastHit2D hit;
     private float defaultGroundCheckDistance;
+    private float Move;
 
 
     private void Awake()
@@ -50,6 +54,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        Move = Input.GetAxisRaw("Horizontal");
 
         if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
@@ -68,7 +73,44 @@ public class PlayerMovement : MonoBehaviour
             HandlePlayerVelocity(false);
         }
 
+        if(Move >= 0.1f || Move <= -0.1f)
+        {
+            anim.SetBool("isRunning", true);
+        }
+        else
+        {
+            anim.SetBool("isRunning", false);
+        }
+
+        /*if (!grounded)
+        {
+            anim.SetBool("isJumping", false);
+        }
+        if (grounded)
+        {
+            anim.SetBool("isjumping", true);
+        } */
+
+        if (Move > 0)
+        {
+            gameObject.transform.localScale = new Vector3((float)0.5, (float)0.5, (float)0.5);
+        }
+
+        if (Move < 0)
+        {
+            gameObject.transform.localScale = new Vector3((float)-0.5, (float)0.5, (float)0.5);
+        }
+
+
+
+
+
     }
+
+
+
+
+
         private void FixedUpdate()
         {
         body.velocity = Vector3.ClampMagnitude(body.velocity, maxSpeed);
