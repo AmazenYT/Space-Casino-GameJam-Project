@@ -25,11 +25,11 @@ public class EnemyShooting : MonoBehaviour
         Debug.Log(distance);
 
 
-        if (distance < 100)
+        if (distance < 30)
         {
             timer += Time.deltaTime;
 
-            if (timer > 2)
+            if (timer > 1.45)
             {
                 timer = 0;
                 shoot();
